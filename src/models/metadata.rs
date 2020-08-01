@@ -452,11 +452,11 @@ pub struct WebPlayerConfig {
 #[derive(Debug, Clone, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct WebPlayerActionsPorting {
-    pub get_share_panel_command: GetSharePanelCommand,
+    pub get_share_panel_command: Option<GetSharePanelCommand>,
     pub subscribe_command: SubscribeCommand,
     pub unsubscribe_command: UnsubscribeCommand,
-    pub add_to_watch_later_command: AddToWatchLaterCommand,
-    pub remove_from_watch_later_command: RemoveFromWatchLaterCommand,
+    pub add_to_watch_later_command: Option<AddToWatchLaterCommand>,
+    pub remove_from_watch_later_command: Option<RemoveFromWatchLaterCommand>,
 }
 
 #[derive(Debug, Clone, Deserialize)]
